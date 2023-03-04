@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -14,6 +19,96 @@ html {
 
 body {
   font-size: 1.6em;
+  font-family: sans-serif;
+}
+
+.shapes {
+  height: 30rem;
+  width: 30rem;
+  border-radius: 50%;
+  background: linear-gradient(60deg, #7f00ff, #ff00ff);
+  position: absolute;
+}
+
+.shape-1 {
+  top: 50%;
+  left: -3%;
+}
+
+.shape-2 {
+  height: 15rem;
+  width: 15rem;
+  top: 20%;
+  right: 7%;
+}
+
+.shape-3 {
+  height: 15rem;
+  width: 15rem;
+  top: 50%;
+  right: -2%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 0 5rem;
+  min-height: 8rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  background: linear-gradient(60deg, #7f00ff, #ff00ff);
+}
+
+.nav {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__link {
+  font-size: 2.2rem;
+  font-weight: 500;
+  transition: 0.4s;
+  border-bottom: 0.3rem solid transparent;
+}
+
+.nav__link:hover {
+  color: #7f00ff;
+  border-bottom: 0.3rem solid #7f00ff;
+}
+
+.sections {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-1 {
+  background-color: white;
+}
+
+.section-2 {
+  background-color: #e5ccff;
+}
+
+.section-3 {
+  background-color: #cc99ff;
+}
+
+.section-4 {
+  background-color: #b266ff;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,26 @@
+.shapes {
+    height: 30rem;
+    width: 30rem;
+    border-radius: 50%;
+    background: linear-gradient(60deg, $cl-primary, $cl-secondary);
+    position: absolute;
+}
+
+.shape-1 {
+    top: 50%;
+    left: -3%;
+}
+
+.shape-2 {
+    height: 15rem;
+    width: 15rem;
+    top: 20%;
+    right: 7%;
+}
+
+.shape-3 {
+    height: 15rem;
+    width: 15rem;
+    top: 50%;
+    right: -2%;
+}
