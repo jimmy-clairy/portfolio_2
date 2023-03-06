@@ -1,0 +1,44 @@
+.btn-toggle {
+    position: relative;
+    height: 4rem;
+    width: 4rem;
+    @include center;
+    border: none;
+    border-radius: $border-rad;
+    background: linear-gradient(60deg, $cl-primary, $cl-secondary);
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    @include desktop-L {
+        display: none;
+    }
+
+    &__line {
+        position: absolute;
+        display: block;
+        width: 75%;
+        height: 0.3rem;
+        background: white;
+        transition: transform 0.3s ease-out, opacity 0.1s ease-out;
+    }
+
+    & .l1 {
+        transform: translateY(-1rem);
+    }
+
+    & .l3 {
+        transform: translateY(1rem);
+    }
+
+    &.active .l1 {
+        transform: translateY(0) rotate(135deg);
+    }
+
+    &.active .l2 {
+        opacity: 0;
+    }
+
+    &.active .l3 {
+        transform: translateY(0) rotate(-135deg);
+    }
+}

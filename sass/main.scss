@@ -1,69 +1,94 @@
 @import "utils/variables";
+@import "utils/mixins";
 
 @import "bases/reset";
 @import "bases/generals";
 
+@import "layout/header";
+
 @import "components/shapes";
+@import "components/nav-slider";
+@import "components/btn-toogles";
 
 
-.header {
-    position: fixed;
-    top: 0;
-    z-index: 10;
-    width: 100%;
-    padding: 0 5rem;
-    min-height: 8rem;
-    background-color: rgba($cl-white, 0.85);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+.intro {
+    position: relative;
+    margin: 0 5%;
+    max-width: 80rem;
+    padding: 2rem;
+    background-color: rgba($cl-white, 0.8);
+    border-radius: $border-rad;
 
-.dot {
-    display: inline-block;
-    width: 1.2rem;
-    height: 1.2rem;
-    border-radius: 50%;
-    margin-left: 0.5rem;
-    background: linear-gradient(60deg, $cl-primary, $cl-secondary);
-}
+    &__topline {
+        display: block;
+        position: relative;
+        font-size: 3rem;
+        letter-spacing: 0.5rem;
+        color: $cl-tertiary;
 
-.nav {
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
-}
+        &::after {
+            position: absolute;
+            content: "";
+            height: 0.4rem;
+            width: 4.5rem;
+            bottom: 40%;
+            background-color: $cl-primary;
+        }
+    }
 
-.nav__link {
-    font-size: 2.2rem;
-    font-weight: 500;
-    transition: 0.4s;
-    border-bottom: 0.3rem solid transparent;
-}
+    &__heading {
+        font-size: 5rem;
+        font-weight: 900;
+        color: $cl-tertiary;
 
-.nav__link:hover {
-    color: $cl-primary;
-    border-bottom: 0.3rem solid $cl-primary;
+        span {
+            color: $cl-primary;
+        }
+    }
+
+    &__p {
+        font-size: 1.8rem;
+        color: $cl-tertiary;
+    }
+
+    &__btn {
+        margin-top: 2rem;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-size: 2rem;
+        color: $cl-white;
+        background-color: $cl-tertiary;
+        padding: 1rem 1.5rem;
+        border-radius: $border-rad;
+        letter-spacing: 0.2rem;
+        box-shadow: 0 15px 10px rgba(#000000, 0.4);
+
+        &:hover {
+            background-color: $cl-primary;
+        }
+    }
 }
 
 .sections {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
-    overflow: hidden;
 }
 
 .section-1 {
     background-color: lighten($cl-primary, 50);
+    padding-top: 8rem;
+    @include center;
 }
 
 .section-2 {
-    background-color: lighten($cl-primary, 40);
+    background-color: lighten($cl-primary, 45);
 }
 
 .section-3 {
-    background-color: lighten($cl-primary, 30);
+    background-color: lighten($cl-primary, 40);
 }
 
 .section-4 {
-    background-color: lighten($cl-primary, 20);
+    background-color: lighten($cl-primary, 35);
 }

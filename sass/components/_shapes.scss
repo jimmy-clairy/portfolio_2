@@ -1,26 +1,39 @@
 .shapes {
-    height: 30rem;
-    width: 30rem;
     border-radius: 50%;
-    background: linear-gradient(60deg, $cl-primary, $cl-secondary);
     position: absolute;
 }
 
 .shape-1 {
+    height: 25rem;
+    width: 25rem;
+    background: linear-gradient(60deg, $cl-primary 20%, $cl-secondary);
     top: 50%;
     left: -3%;
+    box-shadow: rgba($cl-primary, 0.4) 0px 5px, rgba($cl-primary, 0.3) 0px 10px, rgba($cl-primary, 0.2) 0px 15px, rgba($cl-primary, 0.1) 0px 20px, rgba($cl-primary, 0.05) 0px 25px;
 }
 
 .shape-2 {
-    height: 15rem;
-    width: 15rem;
-    top: 20%;
+    height: 12rem;
+    width: 12rem;
+    background: linear-gradient(120deg, $cl-primary 20%, $cl-secondary);
+    top: 30%;
     right: 7%;
+    animation: animateShape-2 5s linear infinite;
 }
 
-.shape-3 {
-    height: 15rem;
-    width: 15rem;
-    top: 50%;
-    right: -2%;
+@keyframes animateShape-2 {
+    0% {
+        top: 30%;
+        right: 7%;
+    }
+
+    30% {
+        top: 15%;
+        right: 10%;
+    }
+
+    80% {
+        top: 40%;
+        right: 30%;
+    }
 }
