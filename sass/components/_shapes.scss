@@ -9,7 +9,7 @@
     background: linear-gradient(60deg, $cl-primary 20%, $cl-secondary);
     top: 50%;
     left: -3%;
-    box-shadow: rgba($cl-primary, 0.4) 0px 5px, rgba($cl-primary, 0.3) 0px 10px, rgba($cl-primary, 0.2) 0px 15px, rgba($cl-primary, 0.1) 0px 20px, rgba($cl-primary, 0.05) 0px 25px;
+    box-shadow: rgba($cl-primary, 0.4) 0px 10px, rgba($cl-primary, 0.3) 0px 20px, rgba($cl-primary, 0.2) 0px 30px, rgba($cl-primary, 0.1) 0px 40px, rgba($cl-primary, 0.05) 0px 50px;
 }
 
 .shape-2 {
@@ -28,12 +28,12 @@
     }
 
     30% {
-        top: 15%;
+        top: 10%;
         right: 10%;
     }
 
     80% {
-        top: 40%;
+        top: 50%;
         right: 30%;
     }
 }

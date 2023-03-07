@@ -1,0 +1,146 @@
+.sections {
+    min-height: 100vh;
+    position: relative;
+}
+
+.section-1 {
+    background-color: lighten($cl-primary, 50);
+    padding-top: 8rem;
+
+    @include center;
+}
+
+.intro {
+    position: relative;
+    margin: 0 5%;
+    max-width: 80rem;
+    padding: 2rem;
+    background-color: rgba($cl-white, 0.8);
+    border-radius: $border-rad;
+
+    &__topline {
+        position: relative;
+        font-size: 3rem;
+        letter-spacing: 0.4rem;
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 0.4rem;
+            width: 4rem;
+            bottom: 0.8rem;
+            background-color: $cl-primary;
+        }
+    }
+
+    &__heading {
+        font-size: 3.8rem;
+        font-weight: 900;
+        height: 12rem;
+
+        @include mobile-L {
+            height: auto;
+        }
+
+        @include tablette {
+            font-size: 4.5rem;
+        }
+
+        span {
+            color: $cl-primary;
+        }
+    }
+
+    &__p {
+        font-size: 2rem;
+    }
+
+    &__btn {
+        display: block;
+        width: fit-content;
+        margin-top: 2rem;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-size: 2rem;
+        color: $cl-white;
+        background-color: $cl-tertiary;
+        padding: 1rem 1.5rem;
+        border-radius: $border-rad;
+        letter-spacing: 0.2rem;
+        box-shadow: 0 15px 10px rgba(#000000, 0.4);
+
+        &:hover {
+            background-color: $cl-primary;
+        }
+    }
+}
+
+.section-2 {
+    padding-top: 11rem;
+    padding-bottom: 8rem;
+}
+
+
+
+h3 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+
+    &::before {
+        content: "« ";
+        color: $cl-primary;
+    }
+
+    &::after {
+        content: " »";
+        color: $cl-primary;
+    }
+}
+
+
+
+.projets {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 5%;
+    max-width: 130rem;
+    transform: translateX(-500px);
+    transition: all 1.2s ease-in-out;
+    opacity: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+
+    &.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.card {
+
+    background-color: rgba($cl-white, 0.8);
+    border-radius: $border-rad;
+    width: 32rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+
+    img {
+        width: 100%;
+    }
+
+    .container {
+        padding: 1rem 2rem;
+    }
+}
+
+.section-3 {
+    background-color: lighten($cl-primary, 40);
+}
+
+.section-4 {
+    background-color: lighten($cl-primary, 35);
+}
