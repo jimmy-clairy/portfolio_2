@@ -43,7 +43,7 @@
     }
 
     &__link {
-        font-size: 2rem;
+        font-size: 2.2rem;
         font-weight: 600;
         transition: 0.4s;
         border-bottom: 0.2rem solid transparent;
@@ -51,6 +51,10 @@
         &:hover {
             color: $cl-primary;
             border-bottom: 0.2rem solid $cl-primary;
+        }
+
+        &.active {
+            color: $cl-primary;
         }
     }
 }

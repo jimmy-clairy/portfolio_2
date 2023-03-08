@@ -19,10 +19,10 @@
     <header class="header">
         <h1 class="header__heading"><a href="#">New portfolio<span class="dot"></span></a></h1>
         <nav class="nav">
-            <a class="nav__link" href="#section-1">Accueil</a>
-            <a class="nav__link" href="#section-2">Projets</a>
-            <a class="nav__link" href="#section-3">Skills</a>
-            <a class="nav__link" href="#section-4">Contact</a>
+            <a class="nav__link" data-nav="section-1" href="#section-1">Accueil</a>
+            <a class="nav__link" data-nav="section-2" href="#section-2">Projets</a>
+            <a class="nav__link" data-nav="section-3" href="#section-3">Skills</a>
+            <!-- <a class="nav__link" data-nav="section-4" href="#section-4">Contact</a> -->
         </nav>
         <div class="social">
             <a class="social__link" href="https://github.com/jimmy-clairy"><img src="./pictures/svg/github.svg"
@@ -50,11 +50,11 @@
         <a class="nav-slider__link" href="#section-1">Accueil</a>
         <a class="nav-slider__link" href="#section-2">Projets</a>
         <a class="nav-slider__link" href="#section-3">Skills</a>
-        <a class="nav-slider__link" href="#section-4">Contact</a>
+        <!-- <a class="nav-slider__link" href="#section-4">Contact</a> -->
     </nav>
 
     <main class="main">
-        <section id="section-1" class="sections section-1">
+        <section id="section-1" class="section section-1">
             <div class="shapes shape-1"></div>
             <div class="shapes shape-2"></div>
 
@@ -74,72 +74,72 @@
             </div>
         </section>
 
-        <section id="section-2" class="sections section-2">
+        <section id="section-2" class="section section-2">
             <div class="shapes shape-1"></div>
             <div class="shapes shape-2"></div>
-
-            <h3>Projets</h3>
             <div class="projets">
-                <div class="card">
-                    <img src="https://www.papierpeintpanoramique.fr/media/catalog/product/cache/871f459736130e239a3f5e6472128962/w/0/w05587-small.jpg"
-                        alt="Image du projet">
-                    <div class="container">
-                        <h4><b>John Doe</b></h4>
-                        <p>Architect & Engineer</p>
-                    </div>
+                <h3>Projets </h3>
+                <div class="cards">
+                    <a class="card" href="https://jimmypro.fr/mes_projets/restaurant_le_capitoul/">
+                        <img src="./pictures/compressed/capitoul.webp" alt="Image du projet">
+                        <div class="content">
+                            <h4 class="card__heading"><b>Capitoul</b></h4>
+                            <p>Html | Sass | Javascript</p>
+                        </div>
+                    </a>
+                    <a class="card" href="https://jimmypro.fr/mes_projets/ohMyFood/">
+                        <img src="./pictures/compressed/ohmyfood-3-oc.webp" alt="Image du projet">
+                        <div class="content">
+                            <h4 class="card__heading"><b>OhMyFood</b></h4>
+                            <p>Html | Sass | Javascript</p>
+                        </div>
+                    </a>
+                    <a class="card" href="https://jimmypro.fr/mes_projets/citations/">
+                        <img src="./pictures/compressed/citation.webp" alt="Image du projet">
+                        <div class="content">
+                            <h4 class="card__heading"><b>Citations</b></h4>
+                            <p>Html | CSS | Javascript</p>
+                        </div>
+                    </a>
+                    <a class="card" href="https://jimmypro.fr/mes_projets/travel_agency/">
+                        <img src="./pictures/compressed/travel-agency.webp" alt="Image du projet">
+                        <div class="content">
+                            <h4 class="card__heading"><b>Travel Agency</b></h4>
+                            <p>Html | Sass</p>
+                        </div>
+                    </a>
+                    <a class="card" href="https://jimmypro.fr/mes_projets/booki/">
+                        <img src="./pictures/compressed/booki-2-oc.webp" alt="Image du projet">
+                        <div class="content">
+                            <h4 class="card__heading"><b>Booki</b></h4>
+                            <p>Html | Sass</p>
+                        </div>
+                    </a>
+                    <a class="card" href="https://jimmypro.fr/mes_projets/appli_meteo/">
+                        <img src="./pictures/compressed/meteo.webp" alt="Image du projet">
+                        <div class="content">
+                            <h4 class="card__heading"><b>Appli Météo</b></h4>
+                            <p>Html | CSS | Javascript</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="card">
-                    <img src="https://www.papierpeintpanoramique.fr/media/catalog/product/cache/871f459736130e239a3f5e6472128962/w/0/w05587-small.jpg"
-                        alt="Image du projet">
-                    <div class="container">
-                        <h4><b>John Doe</b></h4>
-                        <p>Architect & Engineer</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://www.papierpeintpanoramique.fr/media/catalog/product/cache/871f459736130e239a3f5e6472128962/w/0/w05587-small.jpg"
-                        alt="Image du projet">
-                    <div class="container">
-                        <h4><b>John Doe</b></h4>
-                        <p>Architect & Engineer</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://www.papierpeintpanoramique.fr/media/catalog/product/cache/871f459736130e239a3f5e6472128962/w/0/w05587-small.jpg"
-                        alt="Image du projet">
-                    <div class="container">
-                        <h4><b>John Doe</b></h4>
-                        <p>Architect & Engineer</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://www.papierpeintpanoramique.fr/media/catalog/product/cache/871f459736130e239a3f5e6472128962/w/0/w05587-small.jpg"
-                        alt="Image du projet">
-                    <div class="container">
-                        <h4><b>John Doe</b></h4>
-                        <p>Architect & Engineer</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://www.papierpeintpanoramique.fr/media/catalog/product/cache/871f459736130e239a3f5e6472128962/w/0/w05587-small.jpg"
-                        alt="Image du projet">
-                    <div class="container">
-                        <h4><b>John Doe</b></h4>
-                        <p>Architect & Engineer</p>
-                    </div>
-                </div>
+            </div>
 
+        </section>
+        <section id="section-3" class="section section-3">
+            <div class="shapes shape-1"></div>
+            <div class="shapes shape-2"></div>
+            <div class="skills">
+                <h3>Skills</h3>
+                <div class="">
 
+                </div>
             </div>
         </section>
-        <section id="section-3" class="sections section-3">
+        <!-- <section id="section-4" class="section section-4">
             <div class="shapes shape-1"></div>
             <div class="shapes shape-2"></div>
-        </section>
-        <section id="section-4" class="sections section-4">
-            <div class="shapes shape-1"></div>
-            <div class="shapes shape-2"></div>
-        </section>
+        </section> -->
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

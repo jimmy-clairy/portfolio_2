@@ -9,3 +9,39 @@ body {
     font-family: sans-serif;
     color: $cl-tertiary;
 }
+
+.section {
+    min-height: 88vh;
+    position: relative;
+    padding-top: 10rem;
+    @include center;
+}
+
+h3 {
+    position: relative;
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 2rem;
+
+    &::before {
+        content: "« ";
+        color: $cl-primary;
+    }
+
+    &::after {
+        content: " »";
+        color: $cl-primary;
+    }
+}
+
+
+
+// .section-3 {
+//     background-color: lighten($cl-primary, 40);
+// }
+
+.section-4 {
+    background-color: lighten($cl-primary, 35);
+}

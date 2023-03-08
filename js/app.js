@@ -3,6 +3,9 @@ const btnToggle = document.querySelector(".btn-toggle")
 const navSlider = document.querySelector(".nav-slider")
 const navSliderLink = document.querySelectorAll(".nav-slider__link")
 
+const sections = document.querySelectorAll('.section')
+const links = document.querySelectorAll('.nav__link')
+
 btnToggle.addEventListener("click", toggleNav)
 navSliderLink.forEach(a => a.addEventListener("click", () => toggleNav()))
 
@@ -22,7 +25,7 @@ const typingEffect = new Typed(".intro__multiText", {
 
 
 // Effect slide
-const slideProjets = document.querySelector('.projets');
+const slideCards = document.querySelector('.cards');
 
 window.addEventListener('scroll', () => {
 
@@ -30,11 +33,39 @@ window.addEventListener('scroll', () => {
 
     // console.log(scrollTop, clientHeight);
 
-    const topElementToTopViewport = slideProjets.getBoundingClientRect().top;
+    const topElementToTopViewport = slideCards.getBoundingClientRect().top;
 
     // console.log(topElementToTopViewport);
 
     if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9) {
-        slideProjets.classList.add('active')
+        slideCards.classList.add('active')
     }
+})
+
+
+// Effect nav
+const options = {
+    threshold: "0.6", // 0.6 === 60% of the section should be visible
+}
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            console.log(e.target.id)
+            // SECTION INDICATOR
+            links.forEach(link => {
+                if (e.target.id === link.dataset.nav) {
+                    link.classList.add("active")
+                } else {
+                    link.classList.remove("active")
+                }
+            })
+        }
+    })
+
+}, options)
+
+
+sections.forEach(section => {
+    observer.observe(section)
 })
