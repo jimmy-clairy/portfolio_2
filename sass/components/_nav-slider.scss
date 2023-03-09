@@ -14,7 +14,7 @@
     opacity: 0;
     color: $cl-white;
     transition: transform 0.4s cubic-bezier(0.73, 0.11, 0.67, 0.84), opacity 0.4s ease-out;
-    background: linear-gradient(60deg, $cl-primary, $cl-secondary);
+    background: $cl-gradient, black;
 
     @include desktop-L {
         display: none;

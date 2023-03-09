@@ -5,7 +5,7 @@
     @include center;
     border: none;
     border-radius: $border-rad;
-    background: linear-gradient(60deg, $cl-primary, $cl-secondary);
+    background: $cl-gradient, black;
     cursor: pointer;
     transition: transform 0.3s;
 

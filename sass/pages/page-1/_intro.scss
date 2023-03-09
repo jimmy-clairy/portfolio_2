@@ -1,8 +1,11 @@
 .intro {
     position: relative;
+    z-index: 5;
+    width: 90%;
     max-width: 80rem;
-    margin: 0 5%;
-    padding: 0 2rem;
+    margin: 8rem auto -5rem;
+
+    padding: 2rem;
     background-color: rgba($cl-white, 0.8);
     border-radius: $border-rad;
 
@@ -12,8 +15,8 @@
         letter-spacing: 0.4rem;
 
         &::after {
-            position: absolute;
             content: "";
+            position: absolute;
             height: 0.4rem;
             width: 4rem;
             bottom: 0.8rem;
@@ -35,7 +38,10 @@
         }
 
         span {
-            color: $cl-primary;
+            background: $cl-gradient, rgba(0, 0, 0, 0.6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
 

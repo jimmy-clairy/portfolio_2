@@ -6,7 +6,7 @@
 .shape-1 {
     height: 25rem;
     width: 25rem;
-    background: linear-gradient(60deg, $cl-primary 20%, $cl-secondary);
+    background: $cl-gradient, rgba(black, 1);
     top: 50%;
     left: -3%;
     box-shadow: rgba($cl-primary, 0.4) 0px 10px, rgba($cl-primary, 0.3) 0px 20px, rgba($cl-primary, 0.2) 0px 30px, rgba($cl-primary, 0.1) 0px 40px, rgba($cl-primary, 0.05) 0px 50px;
@@ -15,7 +15,7 @@
 .shape-2 {
     height: 12rem;
     width: 12rem;
-    background: linear-gradient(120deg, $cl-primary 20%, $cl-secondary);
+    background: $cl-gradient, rgba(black, 1);
     top: 30%;
     right: 7%;
     animation: animateShape-2 5s linear infinite;

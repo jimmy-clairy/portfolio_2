@@ -8,7 +8,6 @@
     <title>New portfolio</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <meta name="description" content="New portfolio">
     <meta name="description"
         content="Bienvenue sur mon portfolio, je suis développeur web, je me concentre sur la création d'applications Web front-end tout en apprenant les technologies back-end.">
     <link rel="icon" type="image/png" href="pictures/icon/J.png">
@@ -78,48 +77,48 @@
             <div class="shapes shape-1"></div>
             <div class="shapes shape-2"></div>
             <div class="projets">
-                <h3>Projets </h3>
+                <h3 class="projets__heading">Projets </h3>
                 <div class="cards">
                     <a class="card" href="https://jimmypro.fr/mes_projets/restaurant_le_capitoul/">
-                        <img src="./pictures/compressed/capitoul.webp" alt="Image du projet">
-                        <div class="content">
+                        <img class="card__img" src="./pictures/compressed/capitoul.webp" alt="Image du projet">
+                        <div class="card__content">
                             <h4 class="card__heading"><b>Capitoul</b></h4>
-                            <p>Html | Sass | Javascript</p>
+                            <p class="card__p">Html | Sass | Javascript</p>
                         </div>
                     </a>
                     <a class="card" href="https://jimmypro.fr/mes_projets/ohMyFood/">
-                        <img src="./pictures/compressed/ohmyfood-3-oc.webp" alt="Image du projet">
-                        <div class="content">
+                        <img class="card__img" src="./pictures/compressed/ohmyfood-3-oc.webp" alt="Image du projet">
+                        <div class="card__content">
                             <h4 class="card__heading"><b>OhMyFood</b></h4>
-                            <p>Html | Sass | Javascript</p>
+                            <p class="card__p">Html | Sass | Javascript</p>
                         </div>
                     </a>
                     <a class="card" href="https://jimmypro.fr/mes_projets/citations/">
-                        <img src="./pictures/compressed/citation.webp" alt="Image du projet">
-                        <div class="content">
+                        <img class="card__img" src="./pictures/compressed/citation.webp" alt="Image du projet">
+                        <div class="card__content">
                             <h4 class="card__heading"><b>Citations</b></h4>
-                            <p>Html | CSS | Javascript</p>
+                            <p class="card__p">Html | CSS | Javascript</p>
                         </div>
                     </a>
                     <a class="card" href="https://jimmypro.fr/mes_projets/travel_agency/">
-                        <img src="./pictures/compressed/travel-agency.webp" alt="Image du projet">
-                        <div class="content">
+                        <img class="card__img" src="./pictures/compressed/travel-agency.webp" alt="Image du projet">
+                        <div class="card__content">
                             <h4 class="card__heading"><b>Travel Agency</b></h4>
-                            <p>Html | Sass</p>
+                            <p class="card__p">Html | Sass</p>
                         </div>
                     </a>
                     <a class="card" href="https://jimmypro.fr/mes_projets/booki/">
-                        <img src="./pictures/compressed/booki-2-oc.webp" alt="Image du projet">
-                        <div class="content">
+                        <img class="card__img" src="./pictures/compressed/booki-2-oc.webp" alt="Image du projet">
+                        <div class="card__content">
                             <h4 class="card__heading"><b>Booki</b></h4>
-                            <p>Html | Sass</p>
+                            <p class="card__p">Html | Sass</p>
                         </div>
                     </a>
                     <a class="card" href="https://jimmypro.fr/mes_projets/appli_meteo/">
-                        <img src="./pictures/compressed/meteo.webp" alt="Image du projet">
-                        <div class="content">
+                        <img class="card__img" src="./pictures/compressed/meteo.webp" alt="Image du projet">
+                        <div class="card__content">
                             <h4 class="card__heading"><b>Appli Météo</b></h4>
-                            <p>Html | CSS | Javascript</p>
+                            <p class="card__p">Html | CSS | Javascript</p>
                         </div>
                     </a>
                 </div>
@@ -129,10 +128,52 @@
         <section id="section-3" class="section section-3">
             <div class="shapes shape-1"></div>
             <div class="shapes shape-2"></div>
-            <div class="skills">
-                <h3>Skills</h3>
-                <div class="">
+            <div class="skill" id="skill">
+                <h3 class="skill__heading">Compétences</h3>
+                <div class="skill__content">
+                    <div class="skill__card">
+                        <img class="skill__img" src="./pictures/icon/html5.png" alt="icon skill" width="80" height="80">
+                        <span class="skill__txt">Html 5</span>
+                    </div>
 
+                    <div class="skill__card">
+                        <img class="skill__img" src="./pictures/icon/css.png" alt="icon skill" width="80" height="80">
+                        <span class="skill__txt">Css 3</span>
+                    </div>
+
+                    <div class="skill__card">
+                        <img class="skill__img" src="./pictures/icon/sass-480x480.png" alt="icon skill" width="80"
+                            height="80">
+                        <span class="skill__txt">Sass</span>
+                    </div>
+
+                    <div class="skill__card">
+                        <img class="skill__img" src="./pictures/icon/js.png" alt="icon skill" width="80" height="80">
+                        <span class="skill__txt">Javascript</span>
+                    </div>
+
+                    <div class="skill__card">
+                        <img class="skill__img" src="./pictures/icon/git480x480.png" alt="icon skill" width="80"
+                            height="80">
+                        <span class="skill__txt">Github</span>
+                    </div>
+                </div>
+                <h3 class="skill__heading">En cours</h3>
+                <div class="skill__content">
+                    <div class="skill__card">
+                        <img class="skill__img" src="./pictures/icon/node-js.png" alt="icon skill" width="80"
+                            height="80">
+                        <span class="skill__txt">Node JS</span>
+                    </div>
+                    <div class="skill__card">
+                        <img class="skill__img" src="./pictures/icon/mongodb.png" alt="icon skill" width="80"
+                            height="80">
+                        <span class="skill__txt">Mongo DB</span>
+                    </div>
+                    <div class="skill__card">
+                        <img class="skill__img" src="./pictures/icon/react.png" alt="icon skill" width="80" height="80">
+                        <span class="skill__txt">React</span>
+                    </div>
                 </div>
             </div>
         </section>
