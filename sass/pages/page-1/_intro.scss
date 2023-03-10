@@ -4,7 +4,6 @@
     width: 90%;
     max-width: 80rem;
     margin: 8rem auto -5rem;
-
     padding: 2rem;
     background-color: rgba($cl-white, 0.8);
     border-radius: $border-rad;
@@ -69,7 +68,7 @@
         box-shadow: 0 15px 10px rgba(#000000, 0.4);
 
         &:hover {
-            background-color: $cl-primary;
+            background: $cl-gradient, rgba(0, 0, 0, 0.9);
         }
     }
 }
