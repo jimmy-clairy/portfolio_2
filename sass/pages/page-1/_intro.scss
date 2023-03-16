@@ -24,12 +24,20 @@
     }
 
     &__heading {
-        font-size: 4rem;
+        font-size: 3.1rem;
         font-weight: 900;
-        height: 12rem;
+        margin-bottom: 1rem;
 
-        @include mobile-L {
-            height: auto;
+        @media (min-width:350px) {
+            font-size: 3.4rem;
+        }
+
+        @media (min-width:375px) {
+            font-size: 3.7rem;
+        }
+
+        @media (min-width:425px) {
+            font-size: 4.4rem;
         }
 
         @include tablette {
