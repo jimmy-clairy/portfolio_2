@@ -35,6 +35,7 @@
     cursor: pointer;
     transition: all 0.4s;
     width: 100%;
+    transform-style: preserve-3d;
 
     @include tablette {
         width: 49%;
@@ -56,6 +57,13 @@
         object-fit: cover;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
         border-radius: $border-rad;
+        transition: 0.3s;
+        transform-style: preserve-3d;
+        transform: translate3d(0, 0, 0px);
+    }
+
+    &:hover img {
+        transform: translate3d(0, 0, 50px);
     }
 
     .content {
