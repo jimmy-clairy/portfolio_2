@@ -17,7 +17,7 @@
         transform: scale(0);
     }
 
-    &.active {
+    &.active-slide {
         opacity: 1;
         transform: translateX(0);
 
@@ -48,8 +48,8 @@
 
     &:hover {
         transform: scale(1.05);
-        background-color: rgba($cl-primary, 0.8);
-        color: aliceblue;
+        background-color: rgba($cl-primary, 0.7);
+        color: $cl-white;
     }
 
     img {

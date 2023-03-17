@@ -17,7 +17,7 @@ const header = document.querySelector('.header');
 
 window.addEventListener('scroll', () => {
     // console.log(window.scrollY);
-    if (window.scrollY > 10) {
+    if (window.scrollY > 20) {
         header.classList.add("active")
     } else {
         header.classList.remove("active")
@@ -39,7 +39,7 @@ const typingEffect = new Typed(".intro__multiText", {
 if (window.innerWidth > 800) {
     let shape = document.querySelectorAll(".shape-2")
     console.log(shape);
-    shape.forEach((a) => a.classList.add('active'))
+    shape.forEach((a) => a.classList.add('active-shape'))
 }
 
 
@@ -59,14 +59,14 @@ window.addEventListener('scroll', () => {
 
     const { scrollTop, clientHeight } = document.documentElement;
 
-    console.log(scrollTop, clientHeight);
+    // console.log(scrollTop, clientHeight);
 
     const topElementToTopViewport = slideCards.getBoundingClientRect().top;
 
     // console.log(topElementToTopViewport);
 
     if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9) {
-        slideCards.classList.add('active')
+        slideCards.classList.add('active-slide')
     }
 })
 
