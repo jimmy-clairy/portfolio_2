@@ -1,0 +1,22 @@
+.social {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile-L {
+        width: 20rem;
+    }
+
+    &__link {
+        @include center;
+    }
+
+    &__icon {
+        height: 3.5rem;
+        width: 3.5rem;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+}

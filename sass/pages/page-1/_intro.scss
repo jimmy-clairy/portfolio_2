@@ -32,8 +32,8 @@
             font-size: 3.4rem;
         }
 
-        @media (min-width:375px) {
-            font-size: 3.7rem;
+        @media (min-width:380px) {
+            font-size: 3.8rem;
         }
 
         @media (min-width:425px) {
@@ -45,7 +45,7 @@
         }
 
         span {
-            background: $cl-gradient, rgba(0, 0, 0, 0.6);
+            background: $cl-gradient, rgba(0, 0, 0, 0.8);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -53,16 +53,31 @@
     }
 
     &__p {
-        font-size: 1.8rem;
-
         @include desktop {
             font-size: 2rem;
         }
     }
 
+    &__container {
+        margin-top: 2rem;
+
+        @include mobile-L {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .social {
+        @include desktop-L {
+            display: none;
+        }
+    }
+
     &__btn {
         display: block;
-        width: fit-content;
+        min-width: 18rem;
+        text-align: center;
         margin-top: 2rem;
         outline: none;
         border: none;
@@ -70,10 +85,15 @@
         font-size: 2rem;
         color: $cl-white;
         background-color: $cl-tertiary;
-        padding: 1rem 1.5rem;
+        padding: 1rem;
         border-radius: $border-rad;
         letter-spacing: 0.2rem;
         box-shadow: 0 15px 10px rgba(#000000, 0.4);
+        transition: 0.3s;
+
+        @include mobile-L {
+            margin-top: 0;
+        }
 
         &:hover {
             background: $cl-gradient, rgba(0, 0, 0, 0.9);

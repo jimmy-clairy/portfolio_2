@@ -16,24 +16,27 @@
     height: 12rem;
     width: 12rem;
     background: $cl-gradient, rgba(black, 1);
-    top: 30%;
-    right: 7%;
-    animation: animateShape-2 5s linear infinite;
+    top: 15%;
+    right: 10%;
+
+    &.active {
+        animation: animateShape-2 6s linear infinite;
+    }
 }
 
 @keyframes animateShape-2 {
     0% {
-        top: 30%;
-        right: 7%;
-    }
-
-    30% {
-        top: 10%;
+        top: 15%;
         right: 10%;
     }
 
-    80% {
+    30% {
         top: 50%;
         right: 30%;
+    }
+
+    80% {
+        top: 30%;
+        right: 2%;
     }
 }

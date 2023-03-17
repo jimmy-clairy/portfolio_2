@@ -35,10 +35,11 @@
     cursor: pointer;
     transition: all 0.4s;
     width: 100%;
-    transform-style: preserve-3d;
+
 
     @include tablette {
         width: 49%;
+        transform-style: preserve-3d;
     }
 
     @include desktop {
@@ -47,7 +48,7 @@
 
     &:hover {
         transform: scale(1.05);
-        background-color: rgba($cl-primary, 0.7);
+        background-color: rgba($cl-primary, 0.8);
         color: aliceblue;
     }
 
@@ -55,15 +56,23 @@
         width: 100%;
         height: 20rem;
         object-fit: cover;
+        object-position: top;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
         border-radius: $border-rad;
         transition: 0.3s;
-        transform-style: preserve-3d;
-        transform: translate3d(0, 0, 0px);
+
+        @include tablette {
+            transform-style: preserve-3d;
+            transform: translate3d(0, 0, 0px);
+        }
+
     }
 
     &:hover img {
-        transform: translate3d(0, 0, 50px);
+        @include tablette {
+            transform: translate3d(0, 0, 50px);
+        }
+
     }
 
     .content {

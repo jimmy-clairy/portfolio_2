@@ -9,7 +9,7 @@
     cursor: pointer;
     transition: transform 0.3s;
 
-    @include desktop-L {
+    @include desktop {
         display: none;
     }
 
