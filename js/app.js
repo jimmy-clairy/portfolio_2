@@ -1,10 +1,7 @@
-// Effect nav-slider
+// Effect nav-slider ---------------------------------------------------------------------------------------------
 const btnToggle = document.querySelector(".btn-toggle")
 const navSlider = document.querySelector(".nav-slider")
 const navSliderLink = document.querySelectorAll(".nav-slider__link")
-
-const sections = document.querySelectorAll('.section')
-const links = document.querySelectorAll('.nav__link')
 
 btnToggle.addEventListener("click", toggleNav)
 navSliderLink.forEach(a => a.addEventListener("click", () => toggleNav()))
@@ -14,7 +11,21 @@ function toggleNav() {
     navSlider.classList.toggle("active")
 }
 
-// Effect multiText
+
+// Effect header ---------------------------------------------------------------------------------------------
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+    // console.log(window.scrollY);
+    if (window.scrollY > 10) {
+        header.classList.add("active")
+    } else {
+        header.classList.remove("active")
+    }
+})
+
+
+// Effect multiText ---------------------------------------------------------------------------------------------
 const typingEffect = new Typed(".intro__multiText", {
     strings: ["Developer", "Jimmy Clairy"],
     loop: true,
@@ -24,14 +35,31 @@ const typingEffect = new Typed(".intro__multiText", {
 })
 
 
-// Effect slide
+// Active all shape > 800px ---------------------------------------------------------------------------------------------
+if (window.innerWidth > 800) {
+    let shape = document.querySelectorAll(".shape-2")
+    console.log(shape);
+    shape.forEach((a) => a.classList.add('active'))
+}
+
+
+// Active parralax > 800px ---------------------------------------------------------------------------------------------
+if (window.innerWidth > 800) {
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 15,
+        speed: 350
+    });
+}
+
+
+// Effect slide card ---------------------------------------------------------------------------------------------
 const slideCards = document.querySelector('.cards');
 
 window.addEventListener('scroll', () => {
 
     const { scrollTop, clientHeight } = document.documentElement;
 
-    // console.log(scrollTop, clientHeight);
+    console.log(scrollTop, clientHeight);
 
     const topElementToTopViewport = slideCards.getBoundingClientRect().top;
 
@@ -43,7 +71,10 @@ window.addEventListener('scroll', () => {
 })
 
 
-// Effect nav
+// Effect nav ---------------------------------------------------------------------------------------------
+const sections = document.querySelectorAll('.section')
+const links = document.querySelectorAll('.nav__link')
+
 const options = {
     threshold: "0.6", // 0.6 === 60% of the section should be visible
 }
@@ -64,8 +95,6 @@ const observer = new IntersectionObserver(entries => {
     })
 
 }, options)
-
-
 sections.forEach(section => {
     observer.observe(section)
 })
