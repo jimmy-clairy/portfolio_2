@@ -45,7 +45,7 @@ if (window.innerWidth > 800) {
 
 // Active parralax > 800px ---------------------------------------------------------------------------------------------
 if (window.innerWidth > 800) {
-    VanillaTilt.init(document.querySelectorAll(".card"), {
+    VanillaTilt.init(document.querySelectorAll(".parralax"), {
         max: 15,
         speed: 350
     });
