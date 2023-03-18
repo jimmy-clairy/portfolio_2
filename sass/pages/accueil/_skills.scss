@@ -1,6 +1,7 @@
 .skill {
     position: relative;
     max-width: 80rem;
+    padding-bottom: 5rem;
 
     &__content {
         display: flex;
@@ -18,7 +19,6 @@
         display: flex;
         align-items: center;
         transition: 0.4s;
-        cursor: pointer;
 
         &:hover {
             transform: rotate(7deg);

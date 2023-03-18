@@ -27,7 +27,7 @@ window.addEventListener('scroll', () => {
 
 // Effect multiText ---------------------------------------------------------------------------------------------
 const typingEffect = new Typed(".intro__multiText", {
-    strings: ["Developer", "Jimmy Clairy"],
+    strings: ["Jimmy Clairy", "Developer"],
     loop: true,
     typeSpeed: 100,
     backSpeed: 80,
@@ -35,16 +35,16 @@ const typingEffect = new Typed(".intro__multiText", {
 })
 
 
-// Active all shape > 800px ---------------------------------------------------------------------------------------------
-if (window.innerWidth > 800) {
+// Active all shape > 1000px ---------------------------------------------------------------------------------------------
+if (window.innerWidth > 1000) {
     let shape = document.querySelectorAll(".shape-2")
     console.log(shape);
     shape.forEach((a) => a.classList.add('active-shape'))
 }
 
 
-// Active parralax > 800px ---------------------------------------------------------------------------------------------
-if (window.innerWidth > 800) {
+// Active parralax > 1000px ---------------------------------------------------------------------------------------------
+if (window.innerWidth > 1000) {
     VanillaTilt.init(document.querySelectorAll(".parralax"), {
         max: 15,
         speed: 350

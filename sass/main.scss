@@ -12,71 +12,8 @@
 
 @import "layout/header";
 
-@import "pages/page-1/intro";
-@import "pages/page-1/projets";
-@import "pages/page-1/skills";
+@import "pages/accueil/intro";
+@import "pages/accueil/projets";
+@import "pages/accueil/skills";
 
-.big-card {
-    margin-top: 10rem;
-    max-width: 120rem;
-    padding: 1.5rem;
-
-    @include desktop {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    &__img {
-        height: 20rem;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-
-        @include desktop {
-            width: 35%;
-        }
-    }
-
-    &__heading {
-        font-size: 3.5rem;
-        padding: 2rem 0;
-
-        @include desktop {
-            padding: 0 0 2rem;
-        }
-    }
-
-    &__content {
-        @include desktop {
-            width: 60%;
-        }
-    }
-
-    .btns {
-        display: flex;
-        justify-content: space-between;
-        max-width: 30rem;
-    }
-
-    .lighthouse {
-        @include desktop {
-            width: 35%;
-        }
-
-        &__content {
-            @include mobile-L {
-                display: flex;
-                gap: 2rem;
-            }
-
-            @include desktop {
-                flex-direction: column;
-            }
-        }
-    }
-
-    .skill {
-        @include desktop {
-            width: 60%;
-        }
-    }
-}
+@import "pages/others/big-card";

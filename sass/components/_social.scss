@@ -11,6 +11,8 @@
     }
 
     &__icon {
+        object-position: center;
+        // Stop params img
         height: 3.5rem;
         width: 3.5rem;
         transition: transform 0.2s ease-in-out;
