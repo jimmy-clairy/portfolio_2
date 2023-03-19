@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booki</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="description" content="Projet Booki application de réservation en ligne">
+    <link rel="icon" type="./image/png" href="pictures/icon/J.png">
+    <script src="../js/app.js" type="module"></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__heading"><a href="../index.html">New portfolio<span class="dot"></span></a></h1>
+        <nav class="nav">
+            <a class="nav__link" data-nav="section-1" href="../index.html">Accueil</a>
+            <!-- <a class="nav__link" data-nav="section-2" href="#section-2">Projets</a>
+            <a class="nav__link" data-nav="section-3" href="#section-3">Skills</a> -->
+        </nav>
+        <div class="social">
+            <a class="social__link" href="https://github.com/jimmy-clairy" target="_blank" rel="noopener noreferrer">
+                <img class="social__icon" src="../pictures/svg/github.svg" alt="icon">
+            </a>
+            <a class="social__link" href="https://www.linkedin.com/in/jimmy-clairy/" target="_blank"
+                rel="noopener noreferrer">
+                <img class="social__icon" src="../pictures/svg/linkedin.svg" alt="icon">
+            </a>
+            <a class="social__link" href="mailto:jimmyclairy@gmail.com">
+                <img class="social__icon" src="../pictures/svg/envelope-solid.svg" alt="icon">
+            </a>
+        </div>
+        <!-- BTN TOGGLE -->
+        <button class="btn-toggle" aria-label="toggle curtain navigation">
+            <span class="btn-toggle__line l1"></span>
+            <span class="btn-toggle__line l2"></span>
+            <span class="btn-toggle__line l3"></span>
+        </button>
+    </header>
+
+    <!-- NAV SLIDER -->
+    <nav class="nav-slider">
+        <div class="nav-slider__icons">
+            <img id="iconJ" class="nav-slider__img" src="../pictures/icon/J.png" alt="logo" width="80" height="80">
+        </div>
+
+        <p class="nav-slider__p">Contruisons ensemble<br> votre projet</p>
+        <a class="nav-slider__link" href="../index.html">Accueil</a>
+        <!-- <a class="nav-slider__link" href="#section-2">Projets</a>
+        <a class="nav-slider__link" href="#section-3">Skills</a> -->
+    </nav>
+    <main class="main">
+        <div class="shapes shape-1"></div>
+        <div class="shapes shape-2 active-shape"></div>
+        <div class="section">
+            <div class="card big-card">
+                <a class="big-card__site" href="https://jimmypro.fr/mes_projets/booki/" target="_blank"
+                    rel="noopener noreferrer">
+                    <img class="big-card__img" src="../pictures/compressed/booki-2-oc.webp"
+                        alt="photo du restaurant Booki">
+                </a>
+
+
+                <div class="big-card__content">
+                    <h2 class="big-card__heading">Booki</h2>
+                    <p class="big-card__p">
+                        Bonjour et bienvenue sur le projet Booki!<br><br> J'ai eu le plaisir de
+                        réaliser ce
+                        projet en utilisant une maquette créée sur <b>Figma</b>, en utilisant les langages <b>HTML</b>
+                        et
+                        <b>SASS</b>.<br><br>Cette expérience m'a permis d'améliorer mes connaissances dans ces langages
+                        et de
+                        les mettre en pratique dans un projet concret.<br><br>J'ai intégré la maquette en utilisant une
+                        approche <b>mobile-first</b> tout en respectant les contraintes graphiques et le <b>responsive
+                            design</b>.
+
+                    </p>
+                    <div class="btns">
+                        <a class="btn" href="https://jimmypro.fr/mes_projets/booki/" target="_blank"
+                            rel="noopener noreferrer">Voir site</a>
+                        <a class="btn" href="https://github.com/jimmy-clairy/booki" target="_blank"
+                            rel="noopener noreferrer">Github</a>
+                    </div>
+                </div>
+                <div class="lighthouse">
+                    <h3 class="lighthouse__heading">Lighthouse</h3>
+                    <div class="lighthouse__content">
+                        <div>
+                            <span>Resultat Mobile</span>
+                            <img class="lighthouse__mobile" src="../pictures/lighthouse/booki/mobile.jpg"
+                                alt="image de l'audit">
+                        </div>
+                        <div>
+                            <span>Resultat Desktop</span>
+                            <img class="lighthouse__desktop" src="../pictures/lighthouse/booki/desktop.jpg"
+                                alt="image de l'audit">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3 class="skill__heading">Langages</h3>
+                    <div class="skill__content">
+                        <div class="card skill__card">
+                            <img class="skill__img" src="../pictures/icon/html5.png" alt="icon skill" width="80"
+                                height="80">
+                            <span class="skill__txt">Html 5</span>
+                        </div>
+
+                        <div class="card skill__card">
+                            <img class="skill__img" src="../pictures/icon/sass-480x480.png" alt="icon skill" width="80"
+                                height="80">
+                            <span class="skill__txt">Sass</span>
+                        </div>
+
+                        <div class="card skill__card">
+                            <img class="skill__img" src="../pictures/icon/figma-c.png" alt="icon skill" width="80"
+                                height="80">
+                            <span class="skill__txt">Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+</body>
+
+</html>
