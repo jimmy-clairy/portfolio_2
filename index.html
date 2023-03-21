@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <meta name="description"
         content="Bienvenue sur mon portfolio, je suis développeur web, je me concentre sur la création d'applications Web front-end tout en apprenant les technologies back-end.">
-    <link rel="icon" type="image/png" href="pictures/icon/J.png">
+    <link rel="icon" type="image/png" href="pictures/icon/J.webp">
     <script src="js/app.js" type="module"></script>
 </head>
 
@@ -18,9 +18,9 @@
     <header class="header">
         <h1 class="header__heading"><a href="#">New portfolio<span class="dot"></span></a></h1>
         <nav class="nav">
-            <a class="nav__link" data-nav="section-1" href="#section-1">Accueil</a>
-            <a class="nav__link" data-nav="section-2" href="#section-2">Projets</a>
-            <a class="nav__link" data-nav="section-3" href="#section-3">Skills</a>
+            <a class="nav__link" data-nav="home" href="#home">Accueil</a>
+            <a class="nav__link" data-nav="projets" href="#projets">Projets</a>
+            <a class="nav__link" data-nav="skills" href="#skills">Skills</a>
         </nav>
         <div class="social">
             <a class="social__link" href="https://github.com/jimmy-clairy" target="_blank" rel="noopener noreferrer">
@@ -45,17 +45,17 @@
     <!-- NAV SLIDER -->
     <nav class="nav-slider">
         <div class="nav-slider__icons">
-            <img id="iconJ" class="nav-slider__img" src="./pictures/icon/J.png" alt="logo" width="80" height="80">
+            <img id="iconJ" class="nav-slider__img" src="./pictures/icon/J.webp" alt="logo" width="80" height="80">
         </div>
 
         <p class="nav-slider__p">Contruisons ensemble<br> votre projet</p>
-        <a class="nav-slider__link" href="#section-1">Accueil</a>
-        <a class="nav-slider__link" href="#section-2">Projets</a>
-        <a class="nav-slider__link" href="#section-3">Skills</a>
+        <a class="nav-slider__link" href="#home">Accueil</a>
+        <a class="nav-slider__link" href="#projets">Projets</a>
+        <a class="nav-slider__link" href="#skills">Skills</a>
     </nav>
 
     <main class="main">
-        <section id="section-1" class="section section-1">
+        <section id="home" class="section home">
             <div class="shapes shape-1"></div>
             <div class="shapes shape-2 active-shape"></div>
 
@@ -92,10 +92,10 @@
             </div>
         </section>
 
-        <section id="section-2" class="section section-2">
+        <section id="projets" class="section projets">
             <div class="shapes shape-1"></div>
             <div class="shapes shape-2"></div>
-            <div class="projets">
+            <div class="projets-container">
                 <h3 class="projets__heading">Projets </h3>
                 <div class="cards">
                     <a class="card parralax" href="./html/capitoul.html">
@@ -144,56 +144,58 @@
             </div>
 
         </section>
-        <section id="section-3" class="section section-3">
+        <section id="skills" class="section skills">
             <div class="shapes shape-1"></div>
             <div class="shapes shape-2"></div>
             <div class="skill">
                 <h3 class="skill__heading">Compétences</h3>
                 <div class="skill__content">
                     <div class="card skill__card">
-                        <img class="skill__img" src="./pictures/icon/html5.png" alt="icon skill" width="80" height="80">
+                        <img class="skill__img" src="./pictures/icon/html5.webp" alt="icon skill" width="80"
+                            height="80">
                         <span class="skill__txt">Html 5</span>
                     </div>
 
                     <div class="card skill__card">
-                        <img class="skill__img" src="./pictures/icon/css.png" alt="icon skill" width="80" height="80">
+                        <img class="skill__img" src="./pictures/icon/css.webp" alt="icon skill" width="80" height="80">
                         <span class="skill__txt">Css 3</span>
                     </div>
 
                     <div class="card skill__card">
-                        <img class="skill__img" src="./pictures/icon/sass-480x480.png" alt="icon skill" width="80"
+                        <img class="skill__img" src="./pictures/icon/sass-480x480.webp" alt="icon skill" width="80"
                             height="80">
                         <span class="skill__txt">Sass</span>
                     </div>
 
                     <div class="card skill__card">
-                        <img class="skill__img" src="./pictures/icon/js.png" alt="icon skill" width="80" height="80">
+                        <img class="skill__img" src="./pictures/icon/js.webp" alt="icon skill" width="80" height="80">
                         <span class="skill__txt">Javascript</span>
                     </div>
 
                     <div class="card skill__card">
-                        <img class="skill__img" src="./pictures/icon/git480x480.png" alt="icon skill" width="80"
+                        <img class="skill__img" src="./pictures/icon/git480x480.webp" alt="icon skill" width="80"
                             height="80">
                         <span class="skill__txt">Github</span>
                     </div>
                     <div class="card skill__card">
-                        <img class="skill__img" src="./pictures/icon/node-js.png" alt="icon skill" width="80"
+                        <img class="skill__img" src="./pictures/icon/node-js.webp" alt="icon skill" width="80"
                             height="80">
                         <span class="skill__txt">Node JS</span>
                     </div>
                     <div class="card skill__card">
-                        <img class="skill__img" src="./pictures/icon/mongodb.png" alt="icon skill" width="80"
+                        <img class="skill__img" src="./pictures/icon/mongodb.webp" alt="icon skill" width="80"
                             height="80">
                         <span class="skill__txt">Mongo DB</span>
                     </div>
                     <div class="card skill__card">
-                        <img class="skill__img" src="./pictures/icon/react.png" alt="icon skill" width="80" height="80">
+                        <img class="skill__img" src="./pictures/icon/react.webp" alt="icon skill" width="80"
+                            height="80">
                         <span class="skill__txt">React</span>
                     </div>
                     <div class="card skill__card">
-                        <img class="skill__img" src="./pictures/icon/figma-c.png" alt="icon skill" width="80"
+                        <img class="skill__img" src="./pictures/icon/figma.webp" alt="icon skill" width="80"
                             height="80">
-                        <span class="skill__txt">React</span>
+                        <span class="skill__txt">Figma</span>
                     </div>
                 </div>
             </div>
