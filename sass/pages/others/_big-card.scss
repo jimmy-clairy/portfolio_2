@@ -1,7 +1,7 @@
 .big-card {
     margin-top: 10rem;
     margin-bottom: 2rem;
-    max-width: 120rem;
+    max-width: 130rem;
     padding: 1.5rem;
 
     @include desktop {
@@ -70,6 +70,10 @@
             @include mobile-L {
                 display: flex;
                 gap: 2rem;
+
+                div {
+                    width: 50%;
+                }
             }
         }
     }
