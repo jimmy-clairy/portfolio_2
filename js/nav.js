@@ -10,3 +10,15 @@ function toggleNav() {
     btnToggle.classList.toggle("active")
     navSlider.classList.toggle("active")
 }
+
+// Effect header ---------------------------------------------------------------------------------------------
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+    // console.log(window.scrollY);
+    if (window.scrollY > 20) {
+        header.classList.add("active")
+    } else {
+        header.classList.remove("active")
+    }
+})
