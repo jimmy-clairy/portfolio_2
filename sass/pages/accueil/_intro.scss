@@ -76,6 +76,8 @@
     }
 
     .btn {
+        margin-top: 2rem;
+
         @include mobile-L {
             margin-top: 0;
         }
