@@ -21,26 +21,14 @@
     }
 
     &__heading {
-        font-size: 3rem;
+        font-size: clamp(3rem, 8vw, 5.5rem);
         font-weight: 900;
         margin: 2rem 0;
-
-        @media (min-width:370px) {
-            font-size: 3.5rem;
-        }
-
-        @media (min-width:410px) {
-            font-size: 4rem;
-        }
 
         @include mobile-L {
             br {
                 display: none;
             }
-        }
-
-        @include tablette {
-            font-size: 5.5rem;
         }
 
         span {
