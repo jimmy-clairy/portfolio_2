@@ -21,11 +21,11 @@
     }
 
     &__heading {
-        font-size: clamp(3rem, 8vw, 5.5rem);
+        font-size: clamp(3rem, 9.5vw, 5.5rem);
         font-weight: 900;
         margin: 2rem 0;
 
-        @include mobile-L {
+        @include tablette {
             br {
                 display: none;
             }
