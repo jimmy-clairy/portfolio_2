@@ -55,3 +55,22 @@ img {
     max-width: 80rem;
     margin-top: 15rem;
 }
+
+.reveal {
+    transition: all 1.2s ease-out;
+    opacity: 0;
+    transform: translateX(-250px);
+
+    @include desktop {
+        transform: scale(0);
+    }
+
+    &.reveal-visible {
+        opacity: 1;
+        transform: translateX(0);
+
+        @include desktop {
+            transform: scale(1);
+        }
+    }
+}

@@ -51,26 +51,6 @@ if (window.innerWidth > 1000) {
     });
 }
 
-
-// Effect slide card ---------------------------------------------------------------------------------------------
-const slideCards = document.querySelector('.cards');
-
-window.addEventListener('scroll', () => {
-
-    const { scrollTop, clientHeight } = document.documentElement;
-
-    // console.log(scrollTop, clientHeight);
-
-    const topElementToTopViewport = slideCards.getBoundingClientRect().top;
-
-    // console.log(topElementToTopViewport);
-
-    if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9) {
-        slideCards.classList.add('active-slide')
-    }
-})
-
-
 // Effect nav ---------------------------------------------------------------------------------------------
 const sections = document.querySelectorAll('.section')
 const links = document.querySelectorAll('.nav__link')
@@ -97,4 +77,28 @@ const observer = new IntersectionObserver(entries => {
 }, options)
 sections.forEach(section => {
     observer.observe(section)
+})
+
+// Effect slide card ---------------------------------------------------------------------------------------------
+const ratio = 0.03
+const options1 = {
+    root: null,
+    rootMargin: "0px",
+    threshold: ratio,
+};
+
+const handleIntersect = function (entries, observer) {
+    entries.forEach(function (entry) {
+        if (entry.intersectionRatio > ratio) {
+            entry.target.classList.add('reveal-visible')
+            observer.unobserve(entry.target)
+        } else {
+
+        }
+        console.log(entry.intersectionRatio);
+    })
+}
+const observer1 = new IntersectionObserver(handleIntersect, options1)
+document.querySelectorAll('.reveal').forEach((r) => {
+    observer1.observe(r)
 })

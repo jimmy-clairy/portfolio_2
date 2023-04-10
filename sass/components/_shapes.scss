@@ -16,8 +16,6 @@
     height: 12rem;
     width: 12rem;
     background: $cl-gradient, rgba(black, 1);
-    top: 12%;
-    right: 10%;
 
     &.active-shape {
         animation: animateShape-2 6s linear infinite;
@@ -38,5 +36,10 @@
     70% {
         top: 30%;
         right: 2%;
+    }
+
+    100% {
+        top: 12%;
+        right: 10%;
     }
 }
