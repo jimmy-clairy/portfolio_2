@@ -12,6 +12,16 @@
     justify-content: center;
     transition: 0.4s;
 
+    &.dark {
+        background: $cl-black;
+
+        @include desktop {
+            min-height: 12rem;
+            box-shadow: none;
+            background: none;
+        }
+    }
+
     @include desktop {
         min-height: 12rem;
         box-shadow: none;
@@ -21,6 +31,10 @@
             box-shadow: 0px 3px 15px $cl-tertiary;
             background: $cl-white;
             min-height: 8rem;
+
+            &.dark {
+                background: $cl-black;
+            }
         }
     }
 
@@ -34,11 +48,16 @@
 
     .dot {
         display: inline-block;
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 1rem;
+        height: 1rem;
         border-radius: 50%;
         margin-left: 0.5rem;
         background: linear-gradient($cl-primary, $cl-secondary);
+    }
+
+    .theme {
+        cursor: pointer;
+        font-size: 2.5rem;
     }
 
     .nav {
@@ -51,7 +70,7 @@
 
         &__link {
             position: relative;
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 600;
             transition: 0.4s;
             border-bottom: 2px solid transparent;

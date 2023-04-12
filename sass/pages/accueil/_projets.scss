@@ -6,8 +6,8 @@
 .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 2.5rem;
+    justify-content: center;
+    gap: 2rem;
 
     .card {
         cursor: pointer;
@@ -15,11 +15,11 @@
         width: 100%;
 
         @include tablette {
-            width: 49%;
+            width: 48%;
         }
 
         @include desktop {
-            width: 32%;
+            width: 31.5%;
             transform-style: preserve-3d;
         }
 

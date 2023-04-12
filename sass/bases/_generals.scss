@@ -8,6 +8,11 @@ body {
     font-size: 1.6em;
     font-family: sans-serif;
     color: $cl-tertiary;
+
+    &.dark {
+        color: #f1f1f1;
+        background-color: $cl-black;
+    }
 }
 
 .section {
@@ -22,6 +27,14 @@ body {
     background-color: rgba($cl-white, 0.8);
     padding: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    &.dark {
+        background-color: rgba($cl-white, 0.1);
+    }
+}
+
+h1 {
+    font-size: clamp(2.2rem, 7vw, 3rem);
 }
 
 h3 {
@@ -32,6 +45,10 @@ h3 {
     font-weight: normal;
     text-align: left;
     text-shadow: 1px 1px 2px $cl-white, 2px 2px 2px $cl-white;
+
+    &.dark {
+        text-shadow: none;
+    }
 
     &::before {
         content: "« ";
@@ -54,23 +71,4 @@ img {
 .mentions {
     max-width: 80rem;
     margin-top: 15rem;
-}
-
-.reveal {
-    transition: all 1.2s ease-out;
-    opacity: 0;
-    transform: translateX(-250px);
-
-    @include desktop {
-        transform: scale(0);
-    }
-
-    &.reveal-visible {
-        opacity: 1;
-        transform: translateX(0);
-
-        @include desktop {
-            transform: scale(1);
-        }
-    }
 }
