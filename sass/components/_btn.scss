@@ -1,9 +1,7 @@
 .btn {
     display: block;
     text-align: center;
-    outline: none;
     border: none;
-    cursor: pointer;
     font-size: 1.8rem;
     color: $cl-white;
     background-color: $cl-tertiary;
@@ -11,7 +9,7 @@
     border-radius: $border-rad;
     letter-spacing: 0.2rem;
     box-shadow: 0 5px 10px rgba(#000000, 0.4);
-    transition: 0.3s;
+    transition: 0.4s;
 
     &:hover {
         background: $cl-gradient, rgba(0, 0, 0, 0.9);
