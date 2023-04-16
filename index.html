@@ -83,7 +83,7 @@
 
             <div class="card intro">
                 <span class="intro__topline">Bonjour</span>
-                <h2 class="intro__heading">Je suis <br><span class="intro__multiText"></span></h2>
+                <h2 class="intro__heading">Je suis <br><span class="multiText"></span></h2>
                 <p class="intro__p">Bienvenue sur mon portfolio, je suis développeur web suite à une
                     formation
                     diplômante Bac +2.<br><br>
@@ -199,21 +199,25 @@
                         <img class="skill__img" src="./pictures/icon/git.webp" alt="icon skill" width="80" height="80">
                         <span class="skill__txt">Github</span>
                     </div>
+
                     <div class="card skill__card">
                         <img class="skill__img" src="./pictures/icon/node-js.webp" alt="icon skill" width="80"
                             height="80">
                         <span class="skill__txt">Node JS</span>
                     </div>
+
                     <div class="card skill__card">
                         <img class="skill__img" src="./pictures/icon/mongodb.webp" alt="icon skill" width="80"
                             height="80">
                         <span class="skill__txt">Mongo DB</span>
                     </div>
+
                     <div class="card skill__card">
                         <img class="skill__img" src="./pictures/icon/react.webp" alt="icon skill" width="80"
                             height="80">
                         <span class="skill__txt">React</span>
                     </div>
+
                     <div class="card skill__card">
                         <img class="skill__img" src="./pictures/icon/figma.webp" alt="icon skill" width="80"
                             height="80">
@@ -229,8 +233,27 @@
             <a href="./html/mentions_legales.html">Mentions légales</a>
         </p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- Effect multiText --------------------------------------------------------------------------------------------- -->
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
     <script src="./js/vanilla-tilt.min.js"></script>
+    <script>
+        let typingEffect = new Typed(".multiText", {
+            strings: ["Jimmy Clairy", "Développeur"],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 1500
+        })
+        // Active parralax > 1000px ---------------------------------------------------------------------------------------------
+        if (window.innerWidth > 1000) {
+            VanillaTilt.init(document.querySelectorAll(".parralax"), {
+                max: 15,
+                speed: 350
+            });
+        }
+    </script>
+    <!-- Effect multiText --------------------------------------------------------------------------------------------- -->
 </body>
 
 </html>

@@ -11,7 +11,6 @@ function toggleNav() {
     navSlider.classList.toggle("active")
 }
 
-
 // Effect header ---------------------------------------------------------------------------------------------
 const header = document.querySelector('.header');
 
@@ -25,30 +24,11 @@ window.addEventListener('scroll', () => {
 })
 
 
-// Effect multiText ---------------------------------------------------------------------------------------------
-const typingEffect = new Typed(".intro__multiText", {
-    strings: ["Jimmy Clairy", "Développeur"],
-    loop: true,
-    typeSpeed: 100,
-    backSpeed: 80,
-    backDelay: 1500
-})
-
-
 // Active all shape > 1000px ---------------------------------------------------------------------------------------------
 if (window.innerWidth > 1000) {
     let shape = document.querySelectorAll(".shape-2")
     // console.log(shape);
     shape.forEach((a) => a.classList.add('active-shape'))
-}
-
-
-// Active parralax > 1000px ---------------------------------------------------------------------------------------------
-if (window.innerWidth > 1000) {
-    VanillaTilt.init(document.querySelectorAll(".parralax"), {
-        max: 15,
-        speed: 350
-    });
 }
 
 // Effect nav ---------------------------------------------------------------------------------------------
@@ -80,7 +60,7 @@ sections.forEach(section => {
 })
 
 // Effect slide card ---------------------------------------------------------------------------------------------
-const ratio = 0.03
+const ratio = 0
 const options1 = {
     root: null,
     rootMargin: "0px",
@@ -101,6 +81,9 @@ const observer1 = new IntersectionObserver(handleIntersect, options1)
 document.querySelectorAll('.reveal').forEach((r) => {
     observer1.observe(r)
 })
+document.querySelectorAll('.reveal-up').forEach((r) => {
+    observer1.observe(r)
+})
 
 // DarkMode -------------------------------------------------------------------------------------------------------
 const theme = document.querySelector('.theme')
@@ -109,7 +92,6 @@ const h3 = document.querySelectorAll('h3')
 const card = document.querySelectorAll('.card')
 const sun = document.querySelector('.sun')
 const moon = document.querySelector('.moon')
-console.log(sun);
 
 const themeStorage = localStorage.getItem('darkMode')
 if (themeStorage === 'dark') {
