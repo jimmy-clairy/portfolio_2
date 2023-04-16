@@ -107,7 +107,6 @@ const theme = document.querySelector('.theme')
 const body = document.querySelector('body')
 const h3 = document.querySelectorAll('h3')
 const card = document.querySelectorAll('.card')
-const headerActive = document.querySelector('.header')
 const sun = document.querySelector('.sun')
 const moon = document.querySelector('.moon')
 console.log(sun);
@@ -135,7 +134,7 @@ function darkMode() {
     body.classList.add('dark')
     card.forEach(c => c.classList.add('dark'))
     h3.forEach(h => h.classList.add('dark'))
-    headerActive.classList.add('dark')
+    header.classList.add('dark')
 }
 
 function lightMode() {
@@ -145,5 +144,5 @@ function lightMode() {
     body.classList.remove('dark')
     card.forEach(c => c.classList.remove('dark'))
     h3.forEach(h => h.classList.remove('dark'))
-    headerActive.classList.remove('dark')
+    header.classList.remove('dark')
 }
