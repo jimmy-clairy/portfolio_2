@@ -7,7 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 2.1rem;
 
     .card {
         cursor: pointer;
@@ -15,11 +15,11 @@
         width: 100%;
 
         @include tablette {
-            width: 48%;
+            width: calc(50% - 1.05rem); // 1 x gap = 2.1rem / 2 = 1.05rem
         }
 
         @include desktop {
-            width: 31.5%;
+            width: calc(33.3% - 1.4rem); // 2 x gap = 4.2rem / 3 = 1.4rem
             transform-style: preserve-3d;
         }
 
