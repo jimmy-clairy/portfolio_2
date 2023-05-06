@@ -15,6 +15,16 @@ body {
     }
 }
 
+input,
+div,
+textarea,
+button,
+select,
+details,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .section {
     position: relative;
     @include center;
