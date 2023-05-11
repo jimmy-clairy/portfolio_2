@@ -1,3 +1,39 @@
+import { fetchData } from "./fetch/fetchData.js"
+
+const projets = await fetchData("../DB/data.json")
+
+const cards = document.querySelector("#cards")
+
+for (const projet of projets) {
+    const cardClone = document.querySelector("#tmp-card").content.firstElementChild.cloneNode(true)
+    cardClone.href = `./html/projet.html?id=${projet.id}`
+
+    const img = cardClone.querySelector(".card__img")
+    img.src = `./pictures/img/${projet.img}`
+    img.alt = `Projet ${projet.name}`
+
+    const heading = cardClone.querySelector(".card__heading")
+    heading.innerText = `${projet.name}`
+
+    const subHeading = cardClone.querySelector(".card__p")
+    subHeading.innerText = projet.languages
+
+    cards.append(cardClone)
+}
+
+const skills = await fetchData("../DB/skills.json")
+
+const skillContent = document.querySelector("#skill__content")
+for (const skill of skills) {
+    const skillClone = document.querySelector("#skill__card").content.firstElementChild.cloneNode(true)
+    const skillImg = skillClone.querySelector(".skill__img")
+    skillImg.src = `./pictures/icon/${skill.icon}`
+    skillImg.alt = `Icon ${skill.name}`
+    const skillTxt = skillClone.querySelector(".skill__txt")
+    skillTxt.innerText = skill.name
+    skillContent.append(skillClone)
+}
+
 // Effect nav-slider ---------------------------------------------------------------------------------------------
 const btnToggle = document.querySelector(".btn-toggle")
 const navSlider = document.querySelector(".nav-slider")
@@ -22,14 +58,6 @@ window.addEventListener('scroll', () => {
         header.classList.remove("active")
     }
 })
-
-
-// Active all shape > 1000px ---------------------------------------------------------------------------------------------
-if (window.innerWidth > 1000) {
-    let shape = document.querySelectorAll(".shape-2")
-    // console.log(shape);
-    shape.forEach((a) => a.classList.add('active-shape'))
-}
 
 // Effect nav ---------------------------------------------------------------------------------------------
 const sections = document.querySelectorAll('.section')
@@ -58,6 +86,14 @@ const observer = new IntersectionObserver(entries => {
 sections.forEach(section => {
     observer.observe(section)
 })
+
+
+// Active all shape > 1000px ---------------------------------------------------------------------------------------------
+if (window.innerWidth > 1000) {
+    let shape = document.querySelectorAll(".shape-2")
+    // console.log(shape);
+    shape.forEach((a) => a.classList.add('active-shape'))
+}
 
 // Effect slide card ---------------------------------------------------------------------------------------------
 const ratio = 0
@@ -127,4 +163,19 @@ function lightMode() {
     card.forEach(c => c.classList.remove('dark'))
     h3.forEach(h => h.classList.remove('dark'))
     header.classList.remove('dark')
+}
+
+let typingEffect = new Typed(".multiText", {
+    strings: ["Jimmy Clairy", "Développeur"],
+    loop: true,
+    typeSpeed: 100,
+    backSpeed: 80,
+    backDelay: 1500
+})
+// Active parralax > 1000px ---------------------------------------------------------------------------------------------
+if (window.innerWidth > 1000) {
+    VanillaTilt.init(document.querySelectorAll(".parralax"), {
+        max: 15,
+        speed: 350
+    });
 }
