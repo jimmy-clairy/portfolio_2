@@ -9,7 +9,7 @@ for (const projet of projets) {
     cardClone.href = `./html/projet.html?id=${projet.id}`
 
     const img = cardClone.querySelector(".card__img")
-    img.src = `./pictures/img/${projet.img}`
+    img.src = `./assets/img/${projet.img}`
     img.alt = `Projet ${projet.name}`
 
     const heading = cardClone.querySelector(".card__heading")
@@ -27,7 +27,7 @@ const skillContent = document.querySelector("#skill__content")
 for (const skill of skills) {
     const skillClone = document.querySelector("#skill__card").content.firstElementChild.cloneNode(true)
     const skillImg = skillClone.querySelector(".skill__img")
-    skillImg.src = `./pictures/icon/${skill.icon}`
+    skillImg.src = `./assets/icon/${skill.icon}`
     skillImg.alt = `Icon ${skill.name}`
     const skillTxt = skillClone.querySelector(".skill__txt")
     skillTxt.innerText = skill.name

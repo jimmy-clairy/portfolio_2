@@ -15,7 +15,7 @@ const imgUrl = document.querySelector(".big-card__site")
 imgUrl.href = projet.url
 
 const img = document.querySelector(".big-card__img")
-img.src = `../pictures/img/${projet.img}`
+img.src = `../assets/img/${projet.img}`
 img.alt = `Projet ${projet.name}`
 
 const heading = document.querySelector(".big-card__heading")
@@ -30,19 +30,25 @@ btnSite.href = projet.url
 const btnGit = document.querySelector(".btn-git")
 btnGit.href = projet.urlGit
 
-const lighthouseMobile = document.querySelector(".lighthouse__mobile")
-lighthouseMobile.src = `../pictures/lighthouse/${projet.imgLighthouse[0]}`
+if (projet.imgLighthouse) {
+    const lighthouseMobile = document.querySelector(".lighthouse__mobile")
+    lighthouseMobile.src = `../assets/lighthouse/${projet.imgLighthouse[0]}`
 
-const lighthouseDesktop = document.querySelector(".lighthouse__desktop")
-lighthouseDesktop.src = `../pictures/lighthouse/${projet.imgLighthouse[1]}`
+    const lighthouseDesktop = document.querySelector(".lighthouse__desktop")
+    lighthouseDesktop.src = `../assets/lighthouse/${projet.imgLighthouse[1]}`
+} else {
+    const lighthouse = document.querySelector(".lighthouse")
+    lighthouse.remove()
+    const skill = document.querySelector(".skill")
+    skill.style.width = "100%"
+}
 
 const skillContent = document.querySelector("#skill__content")
 
 for (const icon of projet.icon) {
-    console.log(icon);
     const cardClone = document.querySelector("#tmp-card-skill").content.firstElementChild.cloneNode(true)
     const skillImg = cardClone.querySelector(".skill__img")
-    skillImg.src = `../pictures/icon/${icon.img}`
+    skillImg.src = `../assets/icon/${icon.img}`
     const skillTxt = cardClone.querySelector(".skill__txt")
     skillTxt.innerText = icon.name
     skillContent.append(cardClone)
