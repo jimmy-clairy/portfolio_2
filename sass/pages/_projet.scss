@@ -1,9 +1,10 @@
 .big-card {
     margin-top: 10rem;
-    max-width: 130rem;
+    max-width: 60rem;
     padding: 1.5rem;
 
     @include desktop {
+        max-width: 130rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -12,8 +13,6 @@
     &__site {
         width: 35%;
         height: fit-content;
-
-
     }
 
     &__img {
