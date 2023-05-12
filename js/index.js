@@ -46,7 +46,7 @@ const sections = document.querySelectorAll('.section')
 const links = document.querySelectorAll('.nav__link')
 
 const options = {
-    threshold: "0.6", // 0.6 === 60% of the section should be visible
+    threshold: "0.45", // 0.6 === 60% of the section should be visible
 }
 
 const observer = new IntersectionObserver(entries => {
@@ -80,7 +80,7 @@ if (window.innerWidth > 1000) {
 const ratio = 0
 const options1 = {
     root: null,
-    rootMargin: "0px",
+    rootMargin: "100px",
     threshold: ratio,
 };
 
