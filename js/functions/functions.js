@@ -41,8 +41,8 @@ export function themeMode() {
 
     function darkMode() {
         localStorage.setItem('darkMode', 'dark')
-        moon.setAttribute('hidden', '')
-        sun.removeAttribute('hidden')
+        moon.style.display = 'none'
+        sun.style.display = 'block'
         body.classList.add('dark')
         card.forEach(c => c.classList.add('dark'))
         h3.forEach(h => h.classList.add('dark'))
@@ -51,8 +51,8 @@ export function themeMode() {
 
     function lightMode() {
         localStorage.setItem('darkMode', 'light')
-        sun.setAttribute('hidden', '')
-        moon.removeAttribute('hidden')
+        sun.style.display = 'none'
+        moon.style.display = 'block'
         body.classList.remove('dark')
         card.forEach(c => c.classList.remove('dark'))
         h3.forEach(h => h.classList.remove('dark'))
