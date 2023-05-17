@@ -15,11 +15,7 @@ export function sliderNav() {
 
 // ThemeMode -------------------------------------------------------------------------------------------------------
 export function themeMode() {
-    const theme = document.querySelector('.theme')
-    const body = document.querySelector('body')
-    const header = document.querySelector('.header')
-    const h3 = document.querySelectorAll('h3')
-    const card = document.querySelectorAll('.card')
+    const body = document.body
     const sun = document.querySelector('.sun')
     const moon = document.querySelector('.moon')
 
@@ -30,6 +26,7 @@ export function themeMode() {
         lightMode()
     }
 
+    const theme = document.querySelector('.theme')
     theme.addEventListener('click', () => {
         const themeStorage = localStorage.getItem('darkMode')
         if (themeStorage === 'dark') {
@@ -44,9 +41,6 @@ export function themeMode() {
         moon.style.display = 'none'
         sun.style.display = 'block'
         body.classList.add('dark')
-        card.forEach(c => c.classList.add('dark'))
-        h3.forEach(h => h.classList.add('dark'))
-        header.classList.add('dark')
     }
 
     function lightMode() {
@@ -54,9 +48,6 @@ export function themeMode() {
         sun.style.display = 'none'
         moon.style.display = 'block'
         body.classList.remove('dark')
-        card.forEach(c => c.classList.remove('dark'))
-        h3.forEach(h => h.classList.remove('dark'))
-        header.classList.remove('dark')
     }
 }
 

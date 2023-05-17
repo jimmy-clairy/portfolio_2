@@ -8,11 +8,6 @@ body {
     font-size: 1.6em;
     font-family: sans-serif;
     color: $cl-tertiary;
-
-    &.dark {
-        color: #f1f1f1;
-        background-color: $cl-black;
-    }
 }
 
 input,
@@ -37,10 +32,6 @@ a {
     background-color: rgba($cl-white, 0.8);
     padding: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
-    &.dark {
-        background-color: rgba($cl-white, 0.1);
-    }
 }
 
 h1 {
@@ -55,10 +46,6 @@ h3 {
     font-weight: normal;
     text-align: left;
     text-shadow: 1px 1px 2px $cl-white, 2px 2px 2px $cl-white;
-
-    &.dark {
-        text-shadow: none;
-    }
 
     &::before {
         content: "« ";

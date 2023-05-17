@@ -3,25 +3,30 @@ import { headerEffect, sliderNav, themeMode } from "./functions/functions.js"
 
 const projets = await fetchData("../DB/data.json")
 const skills = await fetchData("../DB/skills.json")
+/** ThemeMode  */
+themeMode()
 
-/** Create cards */
 const cards = document.querySelector("#cards")
-for (const projet of projets) {
-    const cardClone = document.querySelector("#tmp-card").content.firstElementChild.cloneNode(true)
-    cardClone.href = `./html/projet.html?id=${projet.id}`
+/** Create cards */
+function createCards(projets) {
+    for (const projet of projets) {
+        const cardClone = document.querySelector("#tmp-card").content.firstElementChild.cloneNode(true)
+        cardClone.href = `./html/projet.html?id=${projet.id}`
 
-    const img = cardClone.querySelector(".card__img")
-    img.src = `./assets/img/${projet.img}`
-    img.alt = `Projet ${projet.name}`
+        const img = cardClone.querySelector(".card__img")
+        img.src = `./assets/img/${projet.img}`
+        img.alt = `Projet ${projet.name}`
 
-    const heading = cardClone.querySelector(".card__heading")
-    heading.innerText = `${projet.name}`
+        const heading = cardClone.querySelector(".card__heading")
+        heading.innerText = `${projet.name}`
 
-    const subHeading = cardClone.querySelector(".card__p")
-    subHeading.innerText = projet.languages
+        const subHeading = cardClone.querySelector(".card__p")
+        subHeading.innerText = projet.languages
 
-    cards.append(cardClone)
+        cards.append(cardClone)
+    }
 }
+createCards(projets)
 /** Create cards skill */
 const skillContent = document.querySelector("#skill__content")
 for (const skill of skills) {
@@ -34,8 +39,25 @@ for (const skill of skills) {
     skillContent.append(skillClone)
 }
 
-/** ThemeMode  */
-themeMode()
+const btn = document.querySelector('.btn__all')
+btn.addEventListener('click', () => {
+    if (btn.textContent === 'Javascript') {
+        let result = []
+        for (const projet of projets) {
+            if (projet.icon.find(i => i.name === 'Javascript') !== undefined) {
+                result.push(projet)
+            }
+        }
+        btn.innerText = 'All'
+        cards.innerHTML = ''
+        createCards(result);
+    } else {
+        btn.innerText = 'Javascript'
+        cards.innerHTML = ''
+        createCards(projets);
+    }
+    parralax()
+})
 /** Nav-slider Effect */
 sliderNav()
 /** Header Effect */
@@ -112,9 +134,12 @@ let typingEffect = new Typed(".multiText", {
 })
 
 /** Active parralax > 1000px */
-if (window.innerWidth > 1000) {
-    VanillaTilt.init(document.querySelectorAll(".parralax"), {
-        max: 15,
-        speed: 350
-    });
+function parralax() {
+    if (window.innerWidth > 1000) {
+        VanillaTilt.init(document.querySelectorAll(".parralax"), {
+            max: 15,
+            speed: 350
+        });
+    }
 }
+parralax()

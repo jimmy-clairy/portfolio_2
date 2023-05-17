@@ -3,6 +3,19 @@
     padding-top: 7rem;
 }
 
+.projets__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 42rem;
+
+    button {
+        cursor: pointer;
+        height: fit-content;
+        width: 12.2rem;
+    }
+}
+
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -30,7 +43,7 @@
         }
 
         img {
-            height: 20rem;
+            height: 18rem;
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
             transition: 0.3s;
 
