@@ -19,6 +19,20 @@ export function themeMode() {
     const sun = document.querySelector('.sun')
     const moon = document.querySelector('.moon')
 
+    function darkMode() {
+        localStorage.setItem('darkMode', 'dark')
+        moon.style.display = 'none'
+        sun.style.display = 'block'
+        body.classList.add('dark')
+    }
+
+    function lightMode() {
+        localStorage.setItem('darkMode', 'light')
+        sun.style.display = 'none'
+        moon.style.display = 'block'
+        body.classList.remove('dark')
+    }
+
     const themeStorage = localStorage.getItem('darkMode')
     if (themeStorage === 'dark') {
         darkMode()
@@ -35,20 +49,6 @@ export function themeMode() {
             darkMode()
         }
     })
-
-    function darkMode() {
-        localStorage.setItem('darkMode', 'dark')
-        moon.style.display = 'none'
-        sun.style.display = 'block'
-        body.classList.add('dark')
-    }
-
-    function lightMode() {
-        localStorage.setItem('darkMode', 'light')
-        sun.style.display = 'none'
-        moon.style.display = 'block'
-        body.classList.remove('dark')
-    }
 }
 
 // Effect header ---------------------------------------------------------------------------------------------

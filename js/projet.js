@@ -1,6 +1,13 @@
 import { fetchData } from "./fetch/fetchData.js"
 import { headerEffect, sliderNav, themeMode } from "./functions/functions.js"
 
+/** ThemeMode */
+themeMode()
+/** Nav-slider Effect */
+sliderNav()
+/** Header Effect */
+headerEffect()
+
 /** Recup id in url */
 const id = new URL(window.location).searchParams.get("id")
 
@@ -58,13 +65,6 @@ for (const icon of projet.icon) {
     skillContent.append(cardClone)
 }
 
-/** ThemeMode */
-themeMode()
-/** Nav-slider Effect */
-sliderNav()
-/** Header Effect */
-headerEffect()
-
 /** Slide Effect */
 const ratio = 0
 const options1 = {
@@ -78,8 +78,6 @@ const handleIntersect = function (entries, observer) {
         if (entry.intersectionRatio > ratio) {
             entry.target.classList.add('reveal-visible')
             observer.unobserve(entry.target)
-        } else {
-
         }
     })
 }
