@@ -4,25 +4,19 @@
     padding: 1.5rem;
 
     @include desktop {
-        max-width: 130rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    &__site {
-        width: 35%;
-        height: fit-content;
+        max-width: 120rem;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 3fr 4fr;
+        grid-template-rows: auto auto auto;
+        column-gap: 5rem;
     }
 
     &__img {
+        grid-column: 1/2;
         height: 18rem;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
         transition: 0.4s;
-
-        @include desktop {
-            height: 25rem;
-        }
 
         &:hover {
             transform: scale(1.05);
@@ -39,12 +33,9 @@
     }
 
     &__content {
-        @include desktop {
-            width: 60%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+        line-height: 2.5rem;
+        grid-column: 2/3;
+        grid-row: 1/4;
     }
 
     .btns {
@@ -52,18 +43,9 @@
         display: flex;
         justify-content: space-between;
         max-width: 32rem;
-
-        @include desktop {
-            margin: 0;
-        }
     }
 
     .lighthouse {
-        @include desktop {
-            width: 60%;
-            order: 5;
-        }
-
         &__content {
             @include mobile-L {
                 display: flex;
@@ -78,9 +60,5 @@
 
     .skill {
         padding-bottom: 0;
-
-        @include desktop {
-            width: 35%;
-        }
     }
 }

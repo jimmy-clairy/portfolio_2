@@ -49,8 +49,6 @@ if (projet.imgLighthouse) {
 } else {
     const lighthouse = document.querySelector(".lighthouse")
     lighthouse.remove()
-    const skill = document.querySelector(".skill")
-    skill.style.width = "100%"
 }
 
 /** Create skill cards */
