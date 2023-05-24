@@ -10,7 +10,6 @@
     max-width: 42rem;
 
     button {
-        cursor: pointer;
         height: fit-content;
         width: 12.2rem;
     }
@@ -23,8 +22,6 @@
     gap: 2.1rem;
 
     .card {
-        cursor: pointer;
-        transition: all 0.4s;
         width: 100%;
 
         @include tablette {
@@ -35,6 +32,8 @@
             width: calc(33.3% - 1.4rem); // 2 x gap = 4.2rem / 3 = 1.4rem
             transform-style: preserve-3d;
         }
+
+        transition: 0.4s;
 
         &:hover {
             transform: scale(1.05);

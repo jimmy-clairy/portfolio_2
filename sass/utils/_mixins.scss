@@ -4,36 +4,26 @@
     align-items: center;
 }
 
-;
-
 @mixin mobile-L {
     @media (min-width:500px) {
-        @content
+        @content;
     }
 }
-
-;
 
 @mixin tablette {
     @media (min-width:650px) {
-        @content
+        @content;
     }
 }
-
-;
 
 @mixin desktop {
     @media (min-width:1000px) {
-        @content
+        @content;
     }
 }
-
-;
 
 @mixin desktop-L {
     @media (min-width:1200px) {
-        @content
+        @content;
     }
 }
-
-;

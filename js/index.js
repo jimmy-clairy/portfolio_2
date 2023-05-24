@@ -1,7 +1,7 @@
 import { fetchData } from "./fetch/fetchData.js"
 import { headerEffect, sliderNav, themeMode } from "./functions/functions.js"
 
-const projets = await fetchData("../DB/data.json")
+const projects = await fetchData("../DB/projects.json")
 const skills = await fetchData("../DB/skills.json")
 
 /** ThemeMode  */
@@ -52,8 +52,8 @@ let typingEffect = new Typed(".multiText", {
 
 const cards = document.querySelector("#cards")
 /** Create cards */
-function createCards(projets) {
-    for (const projet of projets) {
+function createCards(projects) {
+    for (const projet of projects) {
         const cardClone = document.querySelector("#tmp-card").content.firstElementChild.cloneNode(true)
         cardClone.href = `./html/projet.html?id=${projet.id}`
 
@@ -70,23 +70,23 @@ function createCards(projets) {
         cards.append(cardClone)
     }
 }
-createCards(projets)
+createCards(projects)
 
 /** Create cards skill */
 const skillContent = document.querySelector("#skill__content")
 for (const skill of skills) {
-    const skillClone = document.querySelector("#skill__card").content.firstElementChild.cloneNode(true)
-    const skillImg = skillClone.querySelector(".skill__img")
+    const skillClone = document.querySelector("#tmp-card__skill").content.firstElementChild.cloneNode(true)
+    const skillImg = skillClone.querySelector("img")
     skillImg.src = `./assets/icon/${skill.icon}`
     skillImg.alt = `Icon ${skill.name}`
-    const skillTxt = skillClone.querySelector(".skill__txt")
+    const skillTxt = skillClone.querySelector("span")
     skillTxt.innerText = skill.name
     skillContent.append(skillClone)
 }
 
-/** Create an array whit all projets Javascrpit */
+/** Create an array whit all projects Javascrpit */
 let projetJS = []
-for (const projet of projets) {
+for (const projet of projects) {
     if (projet.icon.find(i => i.name === 'Javascript') !== undefined) {
         projetJS.push(projet)
     }
@@ -101,7 +101,7 @@ btn.addEventListener('click', () => {
     } else {
         btn.innerText = 'Javascript'
         cards.innerHTML = ''
-        createCards(projets);
+        createCards(projects);
     }
     parralax()
 })

@@ -11,41 +11,41 @@ headerEffect()
 /** Recup id in url */
 const id = new URL(window.location).searchParams.get("id")
 
-const projets = await fetchData("../DB/data.json")
-const projet = projets.find(p => p.id === Number(id))
+const projects = await fetchData("../DB/projects.json")
+const project = projects.find(p => p.id === Number(id))
 
 /** Create card */
 const titleHead = document.querySelector("title")
-titleHead.innerText = `Jimmy Clairy | ${projet.name}`
+titleHead.innerText = `Jimmy Clairy | ${project.name}`
 
 const metaDesc = document.querySelector("meta[name='description']")
-metaDesc.content = `Projet ${projet.name}`
+metaDesc.content = `Projet ${project.name}`
 
 const imgUrl = document.querySelector(".big-card__site")
-imgUrl.href = projet.url
+imgUrl.href = project.url
 
 const img = document.querySelector(".big-card__img")
-img.src = `../assets/img/${projet.img}`
-img.alt = `Projet ${projet.name}`
+img.src = `../assets/img/${project.img}`
+img.alt = `Projet ${project.name}`
 
 const heading = document.querySelector(".big-card__heading")
-heading.innerText = projet.name
+heading.innerText = project.name
 
 const description = document.querySelector(".big-card__p")
-description.innerHTML = projet.description
+description.innerHTML = project.description
 
 const btnSite = document.querySelector(".btn-site")
-btnSite.href = projet.url
+btnSite.href = project.url
 
 const btnGit = document.querySelector(".btn-git")
-btnGit.href = projet.urlGit
+btnGit.href = project.urlGit
 
-if (projet.imgLighthouse) {
+if (project.imgLighthouse) {
     const lighthouseMobile = document.querySelector(".lighthouse__mobile")
-    lighthouseMobile.src = `../assets/lighthouse/${projet.imgLighthouse[0]}`
+    lighthouseMobile.src = `../assets/lighthouse/${project.imgLighthouse[0]}`
 
     const lighthouseDesktop = document.querySelector(".lighthouse__desktop")
-    lighthouseDesktop.src = `../assets/lighthouse/${projet.imgLighthouse[1]}`
+    lighthouseDesktop.src = `../assets/lighthouse/${project.imgLighthouse[1]}`
 } else {
     const lighthouse = document.querySelector(".lighthouse")
     lighthouse.remove()
@@ -53,12 +53,12 @@ if (projet.imgLighthouse) {
 
 /** Create skill cards */
 const skillContent = document.querySelector("#skill__content")
-for (const icon of projet.icon) {
-    const cardClone = document.querySelector("#tmp-card-skill").content.firstElementChild.cloneNode(true)
-    const skillImg = cardClone.querySelector(".skill__img")
+for (const icon of project.icon) {
+    const cardClone = document.querySelector("#tmp-card__skill").content.firstElementChild.cloneNode(true)
+    const skillImg = cardClone.querySelector("img")
     skillImg.src = `../assets/icon/${icon.img}`
     skillImg.alt = `Icon ${icon.name}`
-    const skillTxt = cardClone.querySelector(".skill__txt")
+    const skillTxt = cardClone.querySelector("span")
     skillTxt.innerText = icon.name
     skillContent.append(cardClone)
 }
