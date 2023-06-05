@@ -1,0 +1,98 @@
+.big-card {
+    margin-top: 10rem;
+    max-width: 60rem;
+    padding: 1.5rem;
+
+    @include desktop {
+        max-width: 120rem;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 3fr 4fr;
+        grid-template-rows: auto auto auto;
+        column-gap: 5rem;
+    }
+
+    &__site {
+        position: relative;
+        transition: 0.4s;
+
+        &:hover {
+            transform: scale(1.04);
+        }
+    }
+
+    &__img {
+        grid-column: 1/2;
+        height: 18rem;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    &__see {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background: $cl-gradient, black;
+        color: #fff;
+        width: fit-content;
+        padding: 0.5rem;
+        border-radius: 0 $border-rad;
+        animation: see 1.6s infinite linear;
+    }
+
+    @keyframes see {
+        0% {
+            opacity: 0.3;
+        }
+
+        30%,
+        70% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0.3;
+        }
+    }
+
+    &__heading {
+        font-size: 3.5rem;
+        margin: 1.5rem 0 0;
+
+        @include desktop {
+            margin: 0;
+        }
+    }
+
+    &__content {
+        line-height: 2.5rem;
+        grid-column: 2/3;
+        grid-row: 1/4;
+    }
+
+    .btns {
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        max-width: 32rem;
+    }
+
+    .lighthouse {
+        &__content {
+            @include mobile-L {
+                display: flex;
+                gap: 2rem;
+
+                div {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    .skill {
+        padding-bottom: 0;
+    }
+}

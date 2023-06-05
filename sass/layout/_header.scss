@@ -7,20 +7,8 @@
     min-height: 8rem;
     background: $cl-white;
     box-shadow: 0px 3px 15px $cl-tertiary;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center;
     transition: 0.4s;
-
-    &.dark {
-        background: $cl-black;
-
-        @include desktop {
-            min-height: 12rem;
-            box-shadow: none;
-            background: none;
-        }
-    }
 
     @include desktop {
         min-height: 12rem;
@@ -31,10 +19,6 @@
             box-shadow: 0px 3px 15px $cl-tertiary;
             background: $cl-white;
             min-height: 8rem;
-
-            &.dark {
-                background: $cl-black;
-            }
         }
     }
 
@@ -44,6 +28,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    &__heading {
+        font-size: clamp(2.2rem, 7vw, 3rem);
     }
 
     .dot {
@@ -62,6 +50,11 @@
         &:hover {
             color: $cl-primary
         }
+    }
+
+    .sun,
+    .moon {
+        display: none;
     }
 
     .nav {

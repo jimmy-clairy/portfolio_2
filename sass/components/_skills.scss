@@ -1,39 +1,37 @@
 .skill {
-    position: relative;
     max-width: 80rem;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
 
     &__content {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 2rem;
 
         @include desktop {
             justify-content: flex-start;
         }
-
-        gap: 2rem;
     }
 
-    &__card {
+    .card__skill {
         display: flex;
         align-items: center;
         transition: 0.4s;
 
         &:hover {
-            transform: rotate(7deg);
-            background-color: rgba($cl-primary, 0.6);
+            background-color: rgba($cl-primary, 0.7);
             color: $cl-white;
+            transform: rotate(7deg);
         }
-    }
 
-    &__img {
-        width: 5rem;
-        height: 5rem;
-        margin-right: 1rem;
-    }
+        img {
+            width: 5rem;
+            height: 5rem;
+            margin-right: 1rem;
+        }
 
-    &__txt {
-        font-weight: bold;
+        span {
+            font-weight: bold;
+        }
     }
 }
