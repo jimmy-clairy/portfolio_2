@@ -1,0 +1,20 @@
+body.dark {
+    color: #f1f1f1;
+    background-color: $cl-black;
+
+    .header {
+        background: none;
+
+        &.active {
+            background: $cl-black;
+        }
+    }
+
+    .card {
+        background-color: rgba($cl-white, 0.1);
+    }
+
+    h3 {
+        text-shadow: none;
+    }
+}
